@@ -1,0 +1,10 @@
+{
+    "plugins": [
+        "youtube",
+        "richquotes",
+        "anchors",
+        "mermaid",
+        "-mermaid-2"
+    ],
+    "pluginsConfig": {}
+}

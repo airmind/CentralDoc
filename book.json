@@ -1,18 +1,10 @@
 {
-    "plugins": [ "theme-api" ],
-    "pluginsConfig": {
-        "theme-api": {
-            "languages": [
-                {
-                    "lang": "js",
-                    "name": "JavaScript",
-                    "default": true
-                },
-                {
-                    "lang": "go",
-                    "name": "Go"
-                }
-            ]
-        }
-    }
+    "plugins": [
+        "youtube",
+        "richquotes",
+        "anchors",
+        "mermaid",
+        "-mermaid-2"
+    ],
+    "pluginsConfig": {}
 }

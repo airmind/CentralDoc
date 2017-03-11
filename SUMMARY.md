@@ -6,5 +6,6 @@
 * [License](license.md)
 -------
 * [User Guides](userguide.md)
+* [API](api.md)
 
 

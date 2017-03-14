@@ -1,0 +1,3 @@
+[submodule "src/Central"]
+	path = src/Central
+	url = git://github.com/airmind/Central

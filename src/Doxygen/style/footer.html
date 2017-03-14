@@ -1,0 +1,40 @@
+<!-- start footer part -->
+<!--BEGIN GENERATE_TREEVIEW-->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    $navpath
+    <li class="footer">$generatedby
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="$relpath^doxygen.png" alt="doxygen"/></a> $doxygenversion </li>
+  </ul>
+</div>
+<!--END GENERATE_TREEVIEW-->
+<!--BEGIN !GENERATE_TREEVIEW-->
+<hr class="footer"/><address class="footer"><small>
+$generatedby &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="$relpath^doxygen.png" alt="doxygen"/>
+</a> $doxygenversion
+</small></address>
+<!--END !GENERATE_TREEVIEW-->
+<script>
+$(document).ready(function() {
+    $('#MSearchSelect').attr("src", "sprite2.png");
+    
+    $('.dac-nav-hamburger').on('click', function(){
+        var sidenav = $("#side-nav");
+        var content = $("#doc-content");
+        
+        if(sidenav.width() < 1) {
+            var windowWidth = $(window).width() + "px";
+            var navWidth = 250;
+            var barWidth = 1;
+            content.css({marginLeft:parseInt(navWidth)+barWidth+"px"});
+            sidenav.css({width:navWidth + "px"});
+        } else {
+            $($(".ui-resizable-handle").get(0)).dblclick();
+        }
+    });
+});
+</script>
+</body>
+</html>

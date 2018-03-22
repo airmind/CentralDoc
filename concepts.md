@@ -40,21 +40,13 @@ For core feature enhancements developers who targets to add cross-platform capab
 
 ## Native space design pattern
 
-Native developers should follow the native space design pattern to harmony the co-existing with other components in the system. Developers should understand proxy class, delegate class, and helper class in the framework. During implementation, developers should follow the forward invocation pattern, UI synchronization pattern, and UI call back pattern. 
+Native developers should follow the native space design pattern to harmony the co-existing with other components in the system. Developers should understand proxy class, delegate class, and helper class in the framework. During implementation, developers should follow the forward invocation pattern, UI synchronization pattern, and UI call back pattern.
 
-These patterns are detailed explained in Dev guides. 
-
-
+These patterns are detailed explained in Dev guides.
 
 ![](/assets/Screen Shot 2018-03-23 at 1.01.07 AM.png)
 
 ## 
-
-## DroneTag API
-
-DroneTag is set of protocols between users/pilots and managed UAV/components that allow users to access/configure drone components over-the-air using near-fielding sensing technology.
-
-
 
 
 

@@ -12,7 +12,7 @@ An important concept in Central is the application of DroneTag. DroneTag is a te
 
 ## TAG-Core layer
 
-The TAG-Core layer is an abstraction of the exchange of data between UI to QGC core classes. It is mainly implemented in Qt C/C++. It is the encapsulation of set of QGC core functions to interact with upper layer of code. It isolates Central application into 2 spaces: the Qt space, and the native space. With the evolution of QGC core classes, this layer may also evolves accordingly. 
+The TAG-Core layer is an abstraction of the exchange of data between UI to QGC core classes. It is mainly implemented in Qt C/C++. It is the encapsulation of set of QGC core functions to interact with upper layer of code. It isolates Central application into 2 spaces: the Qt space, and the native space. With the evolution of QGC core classes, this layer may also evolves accordingly.
 
 Developers add their code into corresponding space depends on the targets and features they want to achieve.
 
@@ -22,11 +22,9 @@ On top of TAG-Core layer is the MindSkin layer. It provides native platform prog
 
 For example, Android developers can use Java API to add UI components, and iOS developers can use Obj-C API to build iOS specific UI components, while Qt fans can still use original Qt based UI.
 
-
-
 ## Pattern of development using MindSkin framework
 
-It is important to understand the **pattern of development under MindSkin framework** when trying extend Central with native features. Central is a cross-platform, mixed languages application system, so when you bring native platform features in you need to be careful not to break the cross-platform capability of those non-native parts, as well as potential conflicts with models of other programming languages. 
+It is important to understand the **pattern of development under MindSkin framework** when trying extend Central with native features. Central is a cross-platform, mixed languages application system, so when you bring native platform features in you need to be careful not to break the cross-platform capability of those non-native parts, as well as potential conflicts with models of other programming languages.
 
 Here is the general codes to follow.
 
@@ -36,19 +34,29 @@ For UI customization or native platform enhancement developers, native space is 
 
 For core feature enhancements developers who targets to add cross-platform capabilities, Qt space will be the most appropriate space to work on so the efforts can maintain cross-platform.The code should be added into "Qt" space mostly.  Cross-platform developers should avoid implement cross-platform features through native languages.
 
-
-
 ## ![](/assets/Screen Shot 2018-03-22 at 4.45.06 PM.png)
 
 ## 
 
 ## Native space design pattern
 
+Native developers should follow the native space design pattern to harmony the co-existing with other components in the system. 
+
+For every TAG-core class, there is a mapped proxy class in native language for native component to interact with. Developer interact with this proxy class by registering a delegate component to it, thus the native components can receive events/notifications from or can issue invocation to it. Developer should design UI classes that conform to delegate's interface protocol. 
+
+For every native UI components, it uses TAG-Core helper class to synchronize data and status with Qt components once they are updated.
+
+Forward invocation
+
+UI callback
+
+UI synchronization
+
+ 
 
 
 
-
-![](NativeEnhPattern.png)
+![](/NativeEnhPattern.png)
 
 ## 
 

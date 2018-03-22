@@ -40,29 +40,21 @@ For core feature enhancements developers who targets to add cross-platform capab
 
 ## Native space design pattern
 
-Native developers should follow the native space design pattern to harmony the co-existing with other components in the system. 
+Native developers should follow the native space design pattern to harmony the co-existing with other components in the system. Developers should understand proxy class, delegate class, and helper class in the framework. During implementation, developers should follow the forward invocation pattern, UI synchronization pattern, and UI call back pattern. 
 
-For every TAG-core class, there is a mapped proxy class in native language for native component to interact with. Developer interact with this proxy class by registering a delegate component to it, thus the native components can receive events/notifications from or can issue invocation to it. Developer should design UI classes that conform to delegate's interface protocol. 
-
-For every native UI components, it uses TAG-Core helper class to synchronize data and status with Qt components once they are updated.
-
-Forward invocation
-
-UI callback
-
-UI synchronization
-
- 
+These patterns are detailed explained in Dev guides. 
 
 
 
-![](/NativeEnhPattern.png)
-
-## 
+![](/assets/Screen Shot 2018-03-23 at 1.01.07 AM.png)
 
 ## 
 
 ## DroneTag API
 
 DroneTag is set of protocols between users/pilots and managed UAV/components that allow users to access/configure drone components over-the-air using near-fielding sensing technology.
+
+
+
+
 

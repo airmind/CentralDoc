@@ -10,13 +10,13 @@ Central is built on top of QGC project, which is a pure Qt based system. To intr
 
 An important concept in Central is the application of DroneTag. DroneTag is a technology that allowing an user to access UAV components in a contactless or cable free style, and provide telemetry feedback over-the-air, through radios including but not limited to BLE/Wifi/RFID.
 
-## TAG-Core layer
+### **TAG-Core layer**
 
 The TAG-Core layer is an abstraction of the exchange of data between UI to QGC core classes. It is mainly implemented in Qt C/C++. It is the encapsulation of set of QGC core functions to interact with upper layer of code. It isolates Central application into 2 spaces: the Qt space, and the native space. With the evolution of QGC core classes, this layer may also evolves accordingly.
 
 Developers add their code into corresponding space depends on the targets and features they want to achieve.
 
-## MindSkin layer
+### MindSkin layer
 
 On top of TAG-Core layer is the MindSkin layer. It provides native platform programming APIs to developers, so they do not need to access Qt classes. The MindSkin layer is an abstraction of control and data flows in native programming model, which brings in extensive native user experience in while still following the same framework interface. Developers build their own native UI above the MindSkin layer. They can choose to build Android native UI, iOS native UI, MAC native UI, etc. The native UIs can be configured in parallel with the original Qt UI.
 
@@ -30,13 +30,15 @@ Here is the general codes to follow.
 
 The Central application is divided into 'Native space' and 'Qt space'. Features of Central application are grouped into "cross-platform" features and "native" features.
 
+
+
+## ![](/assets/Screen Shot 2018-03-22 at 4.45.06 PM.png)
+
 For UI customization or native platform enhancement developers, native space is mostly the space they should work on. The code should \(mostly\)  be added into native space. Native developers should not degrade any cross-platform features to platform-dependent features.
 
 For core feature enhancements developers who targets to add cross-platform capabilities, Qt space will be the most appropriate space to work on so the efforts can maintain cross-platform.The code should be added into "Qt" space mostly.  Cross-platform developers should avoid implement cross-platform features through native languages.
 
-## ![](/assets/Screen Shot 2018-03-22 at 4.45.06 PM.png)
 
-## 
 
 ## Native space design pattern
 

@@ -60,43 +60,57 @@ For iOS/MAC builds, XCode is recommended for developing native Obj-C/C++, Swift 
 
 For Java native developer, [Android Studio](https://developer.android.com/studio/index.html) is recommended to build Central application.
 
-compile using qmake, i.e. build in Qt-Creator 
+* compile using qmake, i.e. build in Qt-Creator
+* enter the build directory and add gradle.properties with the following content:
 
-enter the build directory and add gradle.properties with the following content: 
+```
+androidCompileSdkVersion=23
+androidBuildToolsVersion=24.0.0
+qt5AndroidDir=/Users/<uid>/Qt5.9.3/5.9/android_armv7/src/android/
+```
 
-`androidCompileSdkVersion=23 `
+these properties in gradle.properties will be referenced by main build.gradle like below:
 
-`androidBuildToolsVersion=24.0.0 `
+```
+android {
+/*******************************************************
+* The following variables:
+* - androidBuildToolsVersion,
+* - androidCompileSdkVersion
+* - qt5AndroidDir - holds the path to qt android files
+*                   needed to build any Qt application
+*                   on Android.
+*
+* are defined in gradle.properties file. This file is
+* updated by QtCreator and androiddeployqt tools.
+* Changing them manually might break the compilation!
+*******************************************************/
 
-`qt5AndroidDir=/Users/<uid>/Qt5.9.3/5.9/android_armv7/src/android/`
+compileSdkVersion androidCompileSdkVersion.toInteger()
 
-The these properties in gradle.properties will be referennced by main build.gradle like below: 
+buildToolsVersion androidBuildToolsVersion
 
-android { 
+sourceSets {
+    main {
+        manifest.srcFile 'AndroidManifest.xml'
+        java.srcDirs = [qt5AndroidDir + '/src', 'src', 'java']
+        aidl.srcDirs = [qt5AndroidDir + '/src', 'src', 'aidl']
+        res.srcDirs = [qt5AndroidDir + '/res', 'res']
+        resources.srcDirs = ['src']
+        renderscript.srcDirs = ['src']
+        assets.srcDirs = ['assets']
+        jniLibs.srcDirs = ['libs']
+   }
+}
 
-/\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\* 
+lintOptions {
+    abortOnError false
+}
 
-\* The following variables:
+}
+```
 
- \* - androidBuildToolsVersion, 
-
-\* - androidCompileSdkVersion 
-
-\* - qt5AndroidDir - holds the path to qt android files 
-
-\* needed to build any Qt application 
-
-\* on Android. 
-
-\* \* are defined in gradle.properties file. This file is
-
- \* updated by QtCreator and androiddeployqt tools. 
-
-\* Changing them manually might break the compilation! 
-
-\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*/
-
-
+* copy back to qt project directory after android java/ui is finished
 
 
 
@@ -110,8 +124,6 @@ For other builds and platforms, developers can use QtCreator to build Central ap
   * Ubuntu: Desktop Qt 5.9.3 GCC bit
   * Windows: Desktop Qt 5.9.3 MSVC2015 32bit
   * Android: Android for armeabi-v7a \(GCC 4.9, Qt 5.9.3\)
-
-
 
 #### Vagrant
 

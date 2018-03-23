@@ -22,6 +22,8 @@ On top of TAG-Core layer is the MindSkin layer. It provides native platform prog
 
 For example, Android developers can use Java API to add UI components, and iOS developers can use Obj-C API to build iOS specific UI components, while Qt fans can still use original Qt based UI.
 
+
+
 ## Pattern of development using MindSkin framework
 
 It is important to understand the **pattern of development under MindSkin framework** when trying extend Central with native features. Central is a cross-platform, mixed languages application system, so when you bring native platform features in you need to be careful not to break the cross-platform capability of those non-native parts, as well as potential conflicts with models of other programming languages.
@@ -30,15 +32,11 @@ Here is the general codes to follow.
 
 The Central application is divided into 'Native space' and 'Qt space'. Features of Central application are grouped into "cross-platform" features and "native" features.
 
-
-
 ## ![](/assets/Screen Shot 2018-03-22 at 4.45.06 PM.png)
 
 For UI customization or native platform enhancement developers, native space is mostly the space they should work on. The code should \(mostly\)  be added into native space. Native developers should not degrade any cross-platform features to platform-dependent features.
 
 For core feature enhancements developers who targets to add cross-platform capabilities, Qt space will be the most appropriate space to work on so the efforts can maintain cross-platform.The code should be added into "Qt" space mostly.  Cross-platform developers should avoid implement cross-platform features through native languages.
-
-
 
 ## Native space design pattern
 

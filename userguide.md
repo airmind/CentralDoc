@@ -14,21 +14,21 @@ Each time you pull new source to your repository you should run `git submodule u
 
 #### Native Builds
 
-Central builds are supported for OSX, Linux, Windows, iOS and Android. Central uses [Qt](http://www.qt.io) as its cross-platform support library and uses [QtCreator](http://doc.qt.io/qtcreator/index.html) as its default build environment.
+Central builds are supported for OSX, Linux, Windows, iOS and Android. Central uses [Qt](http://www.qt.io) as its cross-platform support library. 
 
 * OSX: OSX 10.7 or higher, 64 bit, clang compiler
 * Ubuntu: 64 bit, gcc compiler
 * Windows: Vista or higher, 32 bit, [Visual Studio 2013 compiler](http://www.visualstudio.com/downloads/download-visual-studio-vs#d-express-windows-desktop)
 * iOS: 8.0 and higher
 * Android: Jelly Bean \(4.1\) and higher
-* Qt version: 5.5.1 ONLY
+* Qt version: 5.9.2+ ONLY
 
 ###### Install QT
 
 You need to install Qt as described below instead of using pre-built packages from say, a Linux distribution because Central needs access to private Qt headers.
 
 * Download the [Qt installer](http://www.qt.io/download-open-source)
-  * Make sure to install Qt version **5.5.1** NOT 5.4.x, 5.6.x, 5.7.x, etc.  
+  * Make sure to install Qt version **5.9.2+** NOT 5.4.x, 5.6.x, 5.7.x, etc.  
   * Ubuntu: Set the downloaded file to executable using:`chmod +x`. Install to default location for use with ./Central-start.sh. If you install Qt to a non-default location you will need to modify Central-start.sh in order to run downloaded builds.
   * Windows: Default installer not quite correct, use [this](http://download.qt.io/official_releases/qt/5.5/5.5.1/qt-opensource-windows-x86-msvc2013-5.5.1.exe) instead
 
@@ -40,15 +40,25 @@ You need to install Qt as described below instead of using pre-built packages fr
 * Windows: [USB Driver](http://www.pixhawk.org/firmware/downloads) to connect to Pixhawk/PX4Flow/3DR Radio
 * Android: [Qt Android Setup](http://doc.qt.io/qt-5/androidgs.html)
 
-###### Building using Qt Creator
+#### Supported IDE
 
-* Launch Qt Creator and open the `Central.pro` project.
-* Select the appropriate kit for your needs:
-  * OSX: Desktop Qt 5.5.1 clang 64 bit
-  * Ubuntu: Desktop Qt 5.5.1 GCC bit
-  * Windows: Desktop Qt 5.5.1 MSVC2013 32bit
-  * Android: Android for armeabi-v7a \(GCC 4.9, Qt 5.5.1\)
-* Note: iOS builds must be built using xCode: [http://doc.qt.io/qt-5/ios-support.html](http://doc.qt.io/qt-5/ios-support.html). Use Qt Creator to generate the XCode project \(_Run Qmake_ from the context menu\).
+###### Building using XCode
+
+For iOS/MAC builds, XCode is recommended for developing native Obj-C/C++, Swift application, or Qt space application as well.
+
+* Use qmake to generate XCode project. qmake uses shadow build. Make a build directory outside the Central source directory and cd to that directory. Type in following command:
+  * iOS build: qmake ../Central/mindskin.pro -r -spec macx-ios-clang CONFIG+=iphoneos
+  * MAC build: qmake ../Central/mindskin.pro -spec macx-xcode
+* After generation completed, open mindskin.xcodeproj in XCode. You can edit source in XCode.
+* Tap the 'Run' button to build and run.
+
+#### ![](/assets/Screen Shot 2018-03-24 at 12.38.41 AM.png)
+
+###### Building using QtCreator
+
+For other builds and platforms, developers can use QtCreator to build Central application.
+
+
 
 #### Vagrant
 

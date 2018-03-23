@@ -1,4 +1,4 @@
-# User Guides
+# Dev Guides
 
 ## Obtaining source code
 
@@ -42,6 +42,8 @@ You need to install Qt as described below instead of using pre-built packages fr
 
 #### Supported IDE
 
+Developers can use [XCode](https://developer.apple.com/xcode/), [Android Studio](https://developer.android.com/studio/index.html), or Qt Creator to develop and build Central application.
+
 ###### Building using XCode
 
 For iOS/MAC builds, XCode is recommended for developing native Obj-C/C++, Swift application, or Qt space application as well.
@@ -60,8 +62,8 @@ For iOS/MAC builds, XCode is recommended for developing native Obj-C/C++, Swift 
 
 For Java native developer, [Android Studio](https://developer.android.com/studio/index.html) is recommended to build Central application.
 
-* compile using qmake, i.e. build in Qt-Creator
-* enter the build directory and add gradle.properties with the following content:
+* Compile using qmake, i.e. build in Qt-Creator
+* Enter the build directory and add gradle.properties with the following content:
 
 ```
 androidCompileSdkVersion=23
@@ -110,7 +112,7 @@ lintOptions {
 }
 ```
 
-* copy back to qt project directory after android java/ui is finished
+* Copy back to qt project directory after android java/ui is finished.
 
 
 
@@ -124,6 +126,7 @@ For other builds and platforms, developers can use QtCreator to build Central ap
   * Ubuntu: Desktop Qt 5.9.3 GCC bit
   * Windows: Desktop Qt 5.9.3 MSVC2015 32bit
   * Android: Android for armeabi-v7a \(GCC 4.9, Qt 5.9.3\)
+  * 
 
 #### Vagrant
 
@@ -157,4 +160,6 @@ To disable XBee support you may add `DEFINES+=DISABLE_XBEE` to qmake.
 ### Video Streaming
 
 Check the [Video Streaming](https://github.com/mavlink/Central/tree/master/src/VideoStreaming) directory for further instructions.
+
+
 

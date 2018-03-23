@@ -42,7 +42,7 @@ You need to install Qt as described below instead of using pre-built packages fr
 
 #### Supported IDE
 
-Developers can use [XCode](https://developer.apple.com/xcode/), [Android Studio](https://developer.android.com/studio/index.html), or Qt Creator to develop and build Central application.
+Developers can use [XCode](https://developer.apple.com/xcode/), [Android Studio](https://developer.android.com/studio/index.html), or [Qt Creator](http://doc.qt.io/qtcreator/index.html) to develop and build Central application.
 
 ###### Building using XCode
 
@@ -126,7 +126,6 @@ For other builds and platforms, developers can use QtCreator to build Central ap
   * Ubuntu: Desktop Qt 5.9.3 GCC bit
   * Windows: Desktop Qt 5.9.3 MSVC2015 32bit
   * Android: Android for armeabi-v7a \(GCC 4.9, Qt 5.9.3\)
-  * 
 
 #### Vagrant
 
@@ -160,6 +159,4 @@ To disable XBee support you may add `DEFINES+=DISABLE_XBEE` to qmake.
 ### Video Streaming
 
 Check the [Video Streaming](https://github.com/mavlink/Central/tree/master/src/VideoStreaming) directory for further instructions.
-
-
 

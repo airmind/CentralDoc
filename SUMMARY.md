@@ -9,6 +9,6 @@
 ---
 
 * [Dev Guides](userguide.md)
-* [DRONETAG API doc](api.md)
+* [MindSkin APIs](api.md)
 * [How to contribute - codes to follow](how-to-contri.md)
 

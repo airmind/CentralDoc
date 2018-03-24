@@ -22,8 +22,6 @@ On top of TAG-Core layer is the MindSkin layer. It provides native platform prog
 
 For example, Android developers can use Java API to add UI components, and iOS developers can use Obj-C API to build iOS specific UI components, while Qt fans can still use original Qt based UI.
 
-
-
 ## Pattern of development using MindSkin framework
 
 It is important to understand the **pattern of development under MindSkin framework** when trying extend Central with native features. Central is a cross-platform, mixed languages application system, so when you bring native platform features in you need to be careful not to break the cross-platform capability of those non-native parts, as well as potential conflicts with models of other programming languages.

@@ -49,14 +49,16 @@ Developers can use [XCode](https://developer.apple.com/xcode/), [Android Studio]
 For iOS/MAC builds, XCode is recommended for developing native Obj-C/C++, Swift application, or Qt space application as well.
 
 * Use qmake to generate XCode project. qmake uses shadow build. Make a build directory outside the Central source directory and cd to that directory. Type in following command:
-  * iOS build: qmake ../Central/mindskin.pro -r -spec macx-ios-clang CONFIG+=iphoneos
-  * MAC build: qmake ../Central/mindskin.pro -spec macx-xcode
+  * iOS build: `qmake ../Central/mindskin.pro -r -spec macx-ios-clang CONFIG+=iphoneos`
+  * MAC build: `qmake ../Central/mindskin.pro CONFIG+=DEBUG -spec macx-xcode`
 * After generation completed, open `mindskin.xcodeproj` in XCode. You can edit source in XCode.
 * Tap the 'Run' button to build and run.
 
 #### ![](/assets/Screen Shot 2018-03-24 at 12.38.41 AM.png)
 
-###### 
+\[Note\*\*\] There is a bug in current version of qmake when building on Mac, that after generation of  `mindskin.xcodeproj` and building the project from XCode, it will report error "No rules to make target \*\*\*\*\*". The reason for this error and the workaround for it are explained in this [link](http://www.club.mindpx.net/topic/5b102e3f2b3ad01c299b4a72).
+
+
 
 ###### Building using Android Studio
 
@@ -113,8 +115,6 @@ lintOptions {
 ```
 
 * Copy back to qt project directory after android java/ui is finished.
-
-
 
 ###### Building using QtCreator
 

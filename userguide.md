@@ -56,11 +56,9 @@ For iOS/MAC builds, XCode is recommended for developing native Obj-C/C++, Swift 
 
 #### ![](/assets/Screen Shot 2018-03-24 at 12.38.41 AM.png)
 
-\[**Note**\*\] There is a bug in current version of qmake when building on Mac, that after generation of  `mindskin.xcodeproj` and building the project from XCode, it will report error "No rules to make target \*\*\*\*\*". The reason for this error and the workaround for it are explained in this [link](http://www.club.mindpx.net/topic/5b102e3f2b3ad01c299b4a72).
+**\[\*\]** There is a bug in current version of qmake when building on Mac, that after generation of  `mindskin.xcodeproj` and building the project from XCode, it will report error "No rules to make target \*\*\*\*\*". The reason for this error and the workaround for it are explained in this [link](http://www.club.mindpx.net/topic/5b102e3f2b3ad01c299b4a72).
 
-\[**Note**\*\*\] Simply clone and run on your own MacBook does not require an Apple Developer ID. In case your Xcode prompts you for code signing before compiling, just set 'code signing' in 'Build setting' to 'Do not code signing'. 
-
-
+**\[\*\*\]** Simply clone and run on your own MacBook does not require an Apple Developer ID. In case your Xcode prompts you for code signing before compiling, just set 'code signing' in 'Build setting' to 'Do not code signing'.
 
 ###### Building using Android Studio
 

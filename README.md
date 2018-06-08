@@ -2,7 +2,7 @@
 
 # Central - vision and scope
 
-It has been realized that although cross-platform system has big advantage in development cost and consistent interface, but the lack of extended user experience actually will prevent more users to accept the system. This is the purpose of Central project.
+It has been realized that although cross-platform system has big advantage in saving development cost and consistent interface, but the lack of rich, extended user experience of native platforms actually prevented more users to accept the system. This is the purpose of Central project.
 
 Beyond a cross-platform system, Central targets on bringing comprehensive native user experience into cross-platform system by defining an adaptive framework to bridge the cross-platform core to multiple native platform.
 

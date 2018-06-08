@@ -50,13 +50,15 @@ For iOS/MAC builds, XCode is recommended for developing native Obj-C/C++, Swift 
 
 * Use qmake to generate XCode project. qmake uses shadow build. Make a build directory outside the Central source directory and cd to that directory. Type in following command:
   * iOS build: `qmake ../Central/mindskin.pro -r -spec macx-ios-clang CONFIG+=iphoneos`
-  * MAC build: `qmake ../Central/mindskin.pro CONFIG+=DEBUG -spec macx-xcode`
+  * MAC build: `qmake ../Central/mindskin.pro CONFIG+=debug -spec macx-xcode`
 * After generation completed, open `mindskin.xcodeproj` in XCode. You can edit source in XCode.
 * Tap the 'Run' button to build and run.
 
 #### ![](/assets/Screen Shot 2018-03-24 at 12.38.41 AM.png)
 
-\[Note\*\*\] There is a bug in current version of qmake when building on Mac, that after generation of  `mindskin.xcodeproj` and building the project from XCode, it will report error "No rules to make target \*\*\*\*\*". The reason for this error and the workaround for it are explained in this [link](http://www.club.mindpx.net/topic/5b102e3f2b3ad01c299b4a72).
+\[**Note**\*\] There is a bug in current version of qmake when building on Mac, that after generation of  `mindskin.xcodeproj` and building the project from XCode, it will report error "No rules to make target \*\*\*\*\*". The reason for this error and the workaround for it are explained in this [link](http://www.club.mindpx.net/topic/5b102e3f2b3ad01c299b4a72).
+
+\[**Note**\*\*\] Simply clone and run on your own MacBook does not require an Apple Developer ID. In case your Xcode prompts you for code signing before compiling, just set 'code signing' in 'Build setting' to 'Do not code signing'. 
 
 
 

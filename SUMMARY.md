@@ -3,7 +3,7 @@
 * [Central - vision and scope](README.md)
 * [Concepts](concepts.md)
 * [DroneTag technology](dronetag-technology.md)
-* [Where to get - downloads for different platforms](supportedPlatforms.md)
+* [Download and Installation](supportedPlatforms.md)
 * [License](license.md)
 
 ---

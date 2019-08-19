@@ -16,10 +16,6 @@ Linux
 
 #### Mac OS
 
-
-
-
-
 #### Linux
 
 ###### Pre-requisite
@@ -38,7 +34,7 @@ sudo apt-get install libsdl2-2.0
 sudo apt-get remove modemmanager -y
 ```
 
-* Authorize yourself rights to open USB modem, where '$USER' is your user name to login into Linux:
+* Authorize yourself access to USB serial port, where '$USER' is your user name to login into Linux:
 
 ```
 sudo usermod -a -G dialout $USER

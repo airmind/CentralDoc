@@ -40,6 +40,10 @@ sudo apt-get remove modemmanager -y
 sudo usermod -a -G dialout $USER
 ```
 
+* Reboot your computer to make sure commands take effect.
+
+
+
 ###### Installation
 
 * Create folder 'MindCentral' under your home folder and copy downloaded MindCentral binary file into it.

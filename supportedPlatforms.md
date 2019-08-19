@@ -22,13 +22,9 @@ Linux
 
 ###### Installation
 
-* Double click downloaded .dmg binary packet.
+* Double click downloaded .dmg binary package.
 * Drag the MindCentral icon into 'Launchpad' on task bar.
 * Tap the MindCentral icon in Launchpad to run the application.
-
-
-
-
 
 #### Linux
 

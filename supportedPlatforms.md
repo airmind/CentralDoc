@@ -16,11 +16,25 @@ Linux
 
 #### Mac OS
 
+###### Pre-requisite
+
+* MacOS 10.12 and above, with minimum 4GB memory and 10GB hard drive free space.
+
+###### Installation
+
+* Double click downloaded .dmg binary packet.
+* Drag the MindCentral icon into 'Launchpad' on task bar.
+* Tap the MindCentral icon in Launchpad to run the application.
+
+
+
+
+
 #### Linux
 
 ###### Pre-requisite
 
-* Ubuntu 18.04
+* Ubuntu 18.04, with Intel i5 processor \(or equivalent\) recommended, minimum 4GB memory and 10GB hard drive free space.
 
 * Install SDL library. Open a terminal and input following commands:
 
@@ -41,8 +55,6 @@ sudo usermod -a -G dialout $USER
 ```
 
 * Reboot your computer to make sure commands take effect.
-
-
 
 ###### Installation
 

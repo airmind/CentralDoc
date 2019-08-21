@@ -58,7 +58,7 @@ sudo usermod -a -G dialout $USER
 * Change working directory into this folder and unzip the binary package using following command:
 
 ```
-tar -xvf MindCentral.zip
+tar -xvf MindCentral.tar.bz2
 ```
 
 * Launch MindCentral application by typing:

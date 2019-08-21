@@ -40,17 +40,29 @@ You need to install Qt as described below instead of using pre-built packages fr
 * Windows: [USB Driver](http://www.pixhawk.org/firmware/downloads) to connect to Pixhawk/PX4Flow/3DR Radio
 * Android: [Qt Android Setup](http://doc.qt.io/qt-5/androidgs.html)
 
-#### Supported IDE
+#### Supported Development Platform
 
 Developers can use [XCode](https://developer.apple.com/xcode/), [Android Studio](https://developer.android.com/studio/index.html), or [Qt Creator](http://doc.qt.io/qtcreator/index.html) to develop and build Central application.
 
-###### Building using XCode
+###### Building on MacOS using XCode
 
 For iOS/MAC builds, XCode is recommended for developing native Obj-C/C++, Swift application, or Qt space application as well.
 
 * Use qmake to generate XCode project. qmake uses shadow build. Make a build directory outside the Central source directory and cd to that directory. Type in following command:
   * iOS build: `qmake ../Central/mindskin.pro -r -spec macx-ios-clang CONFIG+=iphoneos`
   * MAC build: `qmake ../Central/mindskin.pro CONFIG+=debug -spec macx-xcode`
+* To generate Xcode project for release
+
+```
+qmake ../Central/mindskin.pro CONFIG+=release -spec macx-xcode
+```
+
+* To generate Xcode project for deployment
+
+```
+qmake ../Central/mindskin.pro CONFIG+=release -spec macx-xcode CONFIG+=installer
+```
+
 * After generation completed, open `mindskin.xcodeproj` in XCode. You can edit source in XCode.
 * Tap the 'Run' button to build and run.
 
@@ -115,6 +127,28 @@ lintOptions {
 ```
 
 * Copy back to qt project directory after android java/ui is finished.
+
+###### Building on Ubuntu Linux \(18.04\) GCC
+
+* To generate Makefiile for debug
+
+```
+/Opt/Qt/5.12.0/gcc_64/bin/qmake ../Central/mindskin.pro -spec linux-g++ CONFIG+=debug 
+```
+
+* To generate Makefile for release
+
+```
+/Opt/Qt/5.12.0/gcc_64/bin/qmake ../Central/mindskin.pro -spec linux-g++ CONFIG+=release
+```
+
+* To generate Makefile for deployment
+
+```
+/Opt/Qt/5.12.0/gcc_64/bin/qmake ../Central/mindskin.pro -spec linux-g++ CONFIG+=release CONFIG+=installer
+```
+
+###### 
 
 ###### Building using QtCreator
 

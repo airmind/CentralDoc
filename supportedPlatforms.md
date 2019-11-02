@@ -69,3 +69,25 @@ tar -xvf MindCentral.tar.bz2
 
 
 
+# Un-installation
+
+Un-installation is needed if you want to remove MindCentral from your computer, or upon an upgrade to new version.
+
+#### Mac OS
+
+Simply find the MindCentral app in 'Application' and delete it. 
+
+To also remove application data \(logs, plans, etc.\), go too 'Documents' directory, and remove the 'MindCentral' directory there.
+
+You can keep the application data directory if you only want to do an upgrade.
+
+#### Linux
+
+Go to installation directory, and remove all contents under.
+
+Go to Document directory and remove the 'MindCentral' directory.
+
+You can keep the application data directory if you only want to do an upgrade.
+
+
+

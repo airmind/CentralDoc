@@ -8,7 +8,9 @@ MindCentral public release v3.0.1, Sharp A.
 
 #### Select version for different operating systems
 
-[Linux Version](https://github.com/airmind/MindCentral_Public_Releases/releases/download/MindCentral_v3_0_1_A/MindCentral.tar.bz2)
+[MacOS version](https://github.com/airmind/MindCentral_Public_Releases/releases/download/mc_v3.0.1_rev_isep/MindSkin.dmg)
+
+[Linux Version](https://github.com/airmind/MindCentral_Public_Releases/releases/download/mc_v3.0.1_rev_isep/MindCentral.tar.bz2)
 
 # Installation
 

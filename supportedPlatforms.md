@@ -2,13 +2,11 @@
 
 #### Stable Release
 
-MindCentral public release v3.0.0, Sharp A.
+MindCentral public release v3.0.1, Sharp A.
 
 # Download Central binary
 
 #### Select version for different operating systems
-
-[Mac OS Version](https://github.com/airmind/MindCentral_Public_Releases/releases/download/MindCentral_v3_0_0_A/MindSkin.dmg)
 
 [Linux Version](https://github.com/airmind/MindCentral_Public_Releases/releases/download/MindCentral_v3_0_1_A/MindCentral.tar.bz2)
 
@@ -67,15 +65,13 @@ tar -xvf MindCentral.tar.bz2
 ./mindcentral-start.sh &
 ```
 
-
-
 # Un-installation
 
 Un-installation is needed if you want to remove MindCentral from your computer, or upon an upgrade to new version.
 
 #### Mac OS
 
-Simply find the MindCentral app in 'Application' and delete it. 
+Simply find the MindCentral app in 'Application' and delete it.
 
 To also remove application data \(logs, plans, etc.\), go too 'Documents' directory, and remove the 'MindCentral' directory there.
 
@@ -88,6 +84,4 @@ Go to installation directory, and remove all contents under.
 Go to Document directory and remove the 'MindCentral' directory.
 
 You can keep the application data directory if you only want to do an upgrade.
-
-
 
